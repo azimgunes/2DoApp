@@ -26,7 +26,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.backgroundColor = .white
         tableView.frame = view.bounds
-    
         DispatchQueue.main.async { [self] in
             tableView.reloadData()
         }
@@ -92,6 +91,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: [indexPath.row])
         cell.textLabel?.text = model.name
+        cell.textLabel?.textColor = .black
+        cell.contentView.backgroundColor = .systemOrange
         return cell
     }
     
