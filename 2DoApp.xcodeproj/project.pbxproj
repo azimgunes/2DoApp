@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C51CF682B7A66D0009609AB /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C51CF672B7A66D0009609AB /* NotesViewController.swift */; };
+		3C7A2C1A2B7ABCFE00E124B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7A2C192B7ABCFE00E124B6 /* SettingsViewController.swift */; };
 		3CA6313C2B7954F800D8AF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6313B2B7954F800D8AF44 /* AppDelegate.swift */; };
 		3CA6313E2B7954F800D8AF44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6313D2B7954F800D8AF44 /* SceneDelegate.swift */; };
 		3CA631402B7954F800D8AF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6313F2B7954F800D8AF44 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C51CF672B7A66D0009609AB /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		3C7A2C192B7ABCFE00E124B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3CA631382B7954F800D8AF44 /* 2DoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2DoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA6313B2B7954F800D8AF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CA6313D2B7954F800D8AF44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				3CA6313B2B7954F800D8AF44 /* AppDelegate.swift */,
 				3CA6313D2B7954F800D8AF44 /* SceneDelegate.swift */,
 				3CA6313F2B7954F800D8AF44 /* ViewController.swift */,
+				3C51CF672B7A66D0009609AB /* NotesViewController.swift */,
+				3C7A2C192B7ABCFE00E124B6 /* SettingsViewController.swift */,
 				3CA631412B7954F800D8AF44 /* Main.storyboard */,
 				3CA631472B7954F900D8AF44 /* Assets.xcassets */,
 				3CA631492B7954F900D8AF44 /* LaunchScreen.storyboard */,
@@ -158,9 +164,11 @@
 				3CA631552B79584200D8AF44 /* TodoListItems+CoreDataProperties.swift in Sources */,
 				3CA631402B7954F800D8AF44 /* ViewController.swift in Sources */,
 				3CA631542B79584200D8AF44 /* TodoListItems+CoreDataClass.swift in Sources */,
+				3C51CF682B7A66D0009609AB /* NotesViewController.swift in Sources */,
 				3CA6313C2B7954F800D8AF44 /* AppDelegate.swift in Sources */,
 				3CA631462B7954F800D8AF44 /* _DoApp.xcdatamodeld in Sources */,
 				3CA6313E2B7954F800D8AF44 /* SceneDelegate.swift in Sources */,
+				3C7A2C1A2B7ABCFE00E124B6 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

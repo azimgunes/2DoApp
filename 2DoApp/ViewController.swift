@@ -88,11 +88,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: [indexPath.row])
         cell.textLabel?.text = model.name
-        cell.textLabel?.textColor = .black
+        cell.textLabel?.textColor = .white
         cell.contentView.backgroundColor = .systemOrange
+
         return cell
     }
     
