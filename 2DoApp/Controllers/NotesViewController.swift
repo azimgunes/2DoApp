@@ -19,22 +19,28 @@ class NotesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         notesTableView.delegate = self
         notesTableView.dataSource = self
+        
+        didTapForAddNote(sender: UIBarButtonItem())
     }
     
    
     
-    @IBAction func didTapForAddNote(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "new", sender: nil)
-    }
+    @IBAction func didTapForAddNote( sender: UIBarButtonItem) {
+      //  performSegue(withIdentifier: "toNN", sender: self)
+       let vc = storyboard?.instantiateViewController(withIdentifier: "toNN") as? NViewController
+        vc?.navigationItem.largeTitleDisplayMode = .never
+        vc?.completion = { noteTitle, note in
+                    self.navigationController?.popViewController(animated: true)
+                    self.models.append((title: noteTitle,note: note))
+                    self.notesTableView.reloadData()
+                    
+                }
+               
+        }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "note") as? NLViewController else {
-            return
-        }
-        vc.title = "Looking Notes"
-        navigationController?.pushViewController(vc, animated: true)
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
