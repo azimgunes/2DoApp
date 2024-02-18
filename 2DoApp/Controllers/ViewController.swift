@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    
     @IBAction func addButton(_ sender: UIBarButtonItem) {
         didTapForAdd()
     }
@@ -39,14 +40,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @objc func didTapForAdd(){
         let alert = UIAlertController(title: "New Goal", message: "Write New Goal", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "OKEY", style: UIAlertAction.Style.cancel, handler: { [weak self]_ in
+        alert.addAction(UIAlertAction(title: "OKEY", style: UIAlertAction.Style.default, handler: { [weak self]_ in
             guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
+                let newalert = UIAlertController(title: "There is no something.", message: "Don't forget your goals.", preferredStyle: UIAlertController.Style.alert)
+                newalert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default))
+                self?.present(newalert, animated: true, completion: nil)
                 return
             }
             self?.createItem(name: text)
             
         }))
-        present(alert, animated: true)
+        alert.addAction(UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.destructive, handler: { _ in
+            self.dismiss(animated: true)
+        }))
+
+        present(alert, animated: true, completion: nil)
+
     }
     
     @objc func getAllItems (){
@@ -124,6 +133,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }))
 
         present(edit, animated: true)
+    }
+    
+    @objc func forPrint(){
+        print("Tested.")
     }
     
 }
