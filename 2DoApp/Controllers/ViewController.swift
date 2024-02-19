@@ -134,10 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         present(edit, animated: true)
     }
-    
-    @objc func forPrint(){
-        print("Tested.")
-    }
+  
     
 }
 
