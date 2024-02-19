@@ -10,7 +10,6 @@ import UIKit
 class NoteCell: UITableViewCell {
     
     static let cellId = "NoteCell"
-    static let height : CGFloat = 84
 
     
     @IBOutlet weak var titleLabel: UILabel!
