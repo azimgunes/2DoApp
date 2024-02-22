@@ -43,10 +43,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="x6L-eL-G9U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="610-dg-Qot"/>
-                            <constraint firstItem="x6L-eL-G9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AKN-K4-9LH"/>
-                            <constraint firstItem="x6L-eL-G9U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L8M-hM-mNP"/>
-                            <constraint firstItem="x6L-eL-G9U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dly-TV-lVM"/>
+                            <constraint firstItem="x6L-eL-G9U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3cb-9d-JGu"/>
+                            <constraint firstItem="x6L-eL-G9U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GnV-2T-C3s"/>
+                            <constraint firstItem="x6L-eL-G9U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JDw-N0-8mj"/>
+                            <constraint firstItem="x6L-eL-G9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e5u-3w-wjZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X1y-1a-Zyf">

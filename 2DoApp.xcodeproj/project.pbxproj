@@ -58,12 +58,9 @@
 		3C95AF022B7ACF6C0092A159 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3CA6313F2B7954F800D8AF44 /* ViewController.swift */,
-				3CA48D372B83A0E1001C69D1 /* NotesViewController.swift */,
-				3CA48D392B83A743001C69D1 /* NoteCell.swift */,
-				3C56C80D2B83E47400561839 /* AddViewController.swift */,
-				3C56C80F2B83EF5600561839 /* NoteDetailsViewController.swift */,
-				3C7A2C192B7ABCFE00E124B6 /* QuotesViewController.swift */,
+				3CCEF6DD2B87BF3700008750 /* 2Do */,
+				3CCEF6DC2B87BF2900008750 /* Notes */,
+				3CCEF6DE2B87BF4500008750 /* Daily Qs */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				3CA631562B7958AA00D8AF44 /* 2DoListItem */,
-				3CCEF6DB2B87BC1A00008750 /* XIB */,
 				3CCEF6DA2B87BBE700008750 /* Delegates */,
 				3C95AF022B7ACF6C0092A159 /* Controllers */,
+				3CCEF6DB2B87BC1A00008750 /* XIB */,
 				3CA631412B7954F800D8AF44 /* Main.storyboard */,
 				3CA631472B7954F900D8AF44 /* Assets.xcassets */,
 				3CA631492B7954F900D8AF44 /* LaunchScreen.storyboard */,
@@ -124,6 +121,33 @@
 				3CA48D3A2B83A743001C69D1 /* NoteCell.xib */,
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		3CCEF6DC2B87BF2900008750 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				3CA48D372B83A0E1001C69D1 /* NotesViewController.swift */,
+				3CA48D392B83A743001C69D1 /* NoteCell.swift */,
+				3C56C80D2B83E47400561839 /* AddViewController.swift */,
+				3C56C80F2B83EF5600561839 /* NoteDetailsViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		3CCEF6DD2B87BF3700008750 /* 2Do */ = {
+			isa = PBXGroup;
+			children = (
+				3CA6313F2B7954F800D8AF44 /* ViewController.swift */,
+			);
+			path = 2Do;
+			sourceTree = "<group>";
+		};
+		3CCEF6DE2B87BF4500008750 /* Daily Qs */ = {
+			isa = PBXGroup;
+			children = (
+				3C7A2C192B7ABCFE00E124B6 /* QuotesViewController.swift */,
+			);
+			path = "Daily Qs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
