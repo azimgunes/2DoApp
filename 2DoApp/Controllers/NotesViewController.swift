@@ -15,6 +15,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var titleArray = [String]()
     var contentArray = [String]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +29,12 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let nib = UINib(nibName: "NoteCell", bundle: Bundle.main)
         notesTableView.register(nib, forCellReuseIdentifier: NoteCell.cellId)
         
-        // Do any additional setup after loading the view.
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleArray.count
+        return contentArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let notecell = tableView.dequeueReusableCell(withIdentifier: NoteCell.cellId, for: [indexPath.row]) as! NoteCell
@@ -45,13 +47,17 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contentText = contentArray[indexPath.row]
         performSegue(withIdentifier: "notedetail", sender: contentText)
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "notedetail" {
             if let desVC = segue.destination as? NoteDetailsViewController {
+                
                 if let contentText = sender as? String {
-                    desVC.contentText = contentText
+                    desVC.contentTextDetail = contentText
+                    
                 }
             }
         }
@@ -84,6 +90,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
             
         }
     }
-
+    
+    
 }
 

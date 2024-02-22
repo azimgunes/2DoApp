@@ -16,10 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private var models = [TodoListItems]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "2Do App"
+        title = "2Do"
         view.addSubview(tableView)
         getAllItems()
         tableView.delegate = self
@@ -53,9 +53,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.destructive, handler: { _ in
             self.dismiss(animated: true)
         }))
-
+        
         present(alert, animated: true, completion: nil)
-
+        
     }
     
     @objc func getAllItems (){
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
-
+    
     
     @objc func createItem(name: String){
         let newItem = TodoListItems(context: context)
@@ -103,7 +103,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = model.name
         cell.textLabel?.textColor = .white
         cell.contentView.backgroundColor = .systemOrange
-
+        
         return cell
     }
     
@@ -131,10 +131,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         edit.addAction(UIAlertAction(title: "DELETE", style: UIAlertAction.Style.destructive, handler: { [weak self] _ in
             self?.deleteItem(item: item)
         }))
-
+        
         present(edit, animated: true)
     }
-  
+    
     
 }
 
