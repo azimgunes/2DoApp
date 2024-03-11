@@ -19,6 +19,8 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         getData()
         notesTableView.dataSource = self
         notesTableView.delegate = self
@@ -40,7 +42,6 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let notecell = tableView.dequeueReusableCell(withIdentifier: NoteCell.cellId, for: [indexPath.row]) as! NoteCell
         notecell.titleLabel.text = titleArray[indexPath.row]
         notecell.contentLabel.text = contentArray[indexPath.row]
-        
         return notecell
     }
     
@@ -89,8 +90,25 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         } catch {
             
         }
+        
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            self.contentArray.remove(at: indexPath.row)
+            self.titleArray.remove(at: indexPath.row)
+            self.notesTableView.beginUpdates()
+            self.notesTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.notesTableView.endUpdates()
+            self.notesTableView.reloadData()
+        }
+        self.notesTableView.reloadData()
+    }
     
 }
 
