@@ -6,7 +6,7 @@
 outside the concept of tasks to be done, and daily, you can read and be inspired by many random quotes.
 
 
-The main purpose of coding the project is to understand the principles of using structures-
+The main purpose of coding the project is to understand the principles of using structures
 such as tableView and tableViewCell and to gain experience by putting them into practice. 
 In addition to the tableView, the Storyboard tool is also actively used in the project. 
 With Storyboard, a tabBar has been added and transitions between views have been facilitated. 
